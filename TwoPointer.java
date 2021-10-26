@@ -15,7 +15,7 @@ public class TwoPointer {
 			}
 			
 			//when the sum is greater than target
-			if(nums[i]+nums[j]> target) {
+			else {
 				j--;
 			}
 		}
