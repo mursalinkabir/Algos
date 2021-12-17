@@ -63,7 +63,43 @@ class LinkedList:
         while (temp):
             print (temp.data)
             temp = temp.next
+    def deleteNode(self,key):
+         #store head node
+         temp = self.head
+         #If head node itself holds the key to be deleted 
+         if (temp is not None):
+             if(temp.data == key):
+                 self.head = temp.next
+                 temp = None
+                 return
+        #searching for the data    
+         while(temp is not None):
             
+            if(temp.data == key):
+                break
+            prev = temp
+            temp = temp.next
+        
+        #if key is not present in the list
+         if(temp == None):
+            return
+        #Unlink the node from the linked list
+         prev.next = temp.next
+         temp= None
+    # x present in the linked list
+    def search(self, x):
+ 
+        # Initialize current to head
+        current = self.head
+ 
+        # loop till current not equal to None
+        while current != None:
+            if current.data == x:
+                return True # data found
+             
+            current = current.next
+         
+        return False # Data Not found
 # Code execution starts here            
 if __name__ == '__main__':
     
@@ -82,7 +118,13 @@ if __name__ == '__main__':
 
     print('Created linked list is:')
     lnklist.printList()
- 
+    lnklist.deleteNode(8)
+    print('After Deleting  list is:')
+    lnklist.printList()
     
+    if lnklist.search(7):
+        print("Yes")
+    else:
+        print("No")
         
         
