@@ -9,8 +9,9 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-# This function is in LinkedList class
+# The new node is always added before the head of the given Linked List. And newly added node becomes the new head of the Linked List
 # Function to insert a new node at the beginning    
+# if the given Linked List is 10->15->20->25 and we add an item 5 at the front, then the Linked List becomes 5->10->15->20->25
     def push(self,new_data):
          # 1 & 2: Allocate the Node &
         #        Put in the data   
