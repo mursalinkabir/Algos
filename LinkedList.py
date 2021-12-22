@@ -1,5 +1,3 @@
-# A complete working Python3 program to
-# demonstrate deletion in singly
 # linked list with class
 
 # Node class
@@ -75,4 +73,3 @@ llist.deleteNode(1)
 print ("\nLinked List after Deletion of 1:")
 llist.printList()
 
-# This code is contributed by Nikhil Kumar Singh (nickzuck_007)
